@@ -1,0 +1,780 @@
+{
+  "marketing": {
+    "metrics": {
+      "totalSpend": 11028919.91,
+      "totalLeads": 2149509,
+      "totalMQLs": 1503916,
+      "totalSQLs": 449248,
+      "totalOpportunities": 359850,
+      "totalClosedWon": 74720,
+      "avgCAC": 253.10861415525113,
+      "avgROI": 463.06285159817355
+    },
+    "channelPerformance": [
+      {
+        "channel": "Content Marketing",
+        "spend": 1092356.77,
+        "leads": 273691,
+        "MQLs": 191442,
+        "SQLs": 57610,
+        "CAC": 191.8,
+        "ROI": 588.13,
+        "opportunities": 45984,
+        "closed_won": 9463
+      },
+      {
+        "channel": "Facebook Ads",
+        "spend": 3320099.79,
+        "leads": 676838,
+        "MQLs": 472839,
+        "SQLs": 140929,
+        "CAC": 248.55,
+        "ROI": 468.58,
+        "opportunities": 112794,
+        "closed_won": 23442
+      },
+      {
+        "channel": "Google Ads",
+        "spend": 5491585.58,
+        "leads": 1064538,
+        "MQLs": 745840,
+        "SQLs": 223042,
+        "CAC": 260.92,
+        "ROI": 449.57,
+        "opportunities": 179079,
+        "closed_won": 38085
+      },
+      {
+        "channel": "LinkedIn",
+        "spend": 1124877.77,
+        "leads": 134442,
+        "MQLs": 93795,
+        "SQLs": 27667,
+        "CAC": 311.16,
+        "ROI": 345.98,
+        "opportunities": 21993,
+        "closed_won": 3730
+      }
+    ],
+    "funnelData": [
+      {
+        "stage": "Leads",
+        "count": 2149509
+      },
+      {
+        "stage": "MQLs",
+        "count": 1503916
+      },
+      {
+        "stage": "SQLs",
+        "count": 449248
+      },
+      {
+        "stage": "Opportunities",
+        "count": 359850
+      },
+      {
+        "stage": "Closed Won",
+        "count": 74720
+      }
+    ],
+    "trendsData": [
+      {
+        "date": "2024-01-31",
+        "leads": 179125,
+        "MQLs": 125326,
+        "SQLs": 37437,
+        "mrr": 4611597.775833334
+      },
+      {
+        "date": "2024-02-29",
+        "leads": 196301,
+        "MQLs": 134339,
+        "SQLs": 39232,
+        "mrr": 4703829.731350001
+      },
+      {
+        "date": "2024-03-31",
+        "leads": 209271,
+        "MQLs": 141145,
+        "SQLs": 40587,
+        "mrr": 4796061.686866667
+      },
+      {
+        "date": "2024-04-30",
+        "leads": 214861,
+        "MQLs": 144078,
+        "SQLs": 41171,
+        "mrr": 4888293.642383334
+      },
+      {
+        "date": "2024-05-31",
+        "leads": 211701,
+        "MQLs": 142420,
+        "SQLs": 40841,
+        "mrr": 4980525.597900001
+      },
+      {
+        "date": "2024-06-30",
+        "leads": 200566,
+        "MQLs": 136576,
+        "SQLs": 39677,
+        "mrr": 5072757.5534166675
+      }
+    ]
+  },
+  "pipeline": {
+    "metrics": {
+      "totalPipeline": 247012563.89,
+      "weightedPipeline": 118199909.97,
+      "avgDealSize": 123506.281945,
+      "totalDeals": 2000,
+      "avgProbability": 0.48222299999999996,
+      "winRate": 51.053283767038415
+    },
+    "stageBreakdown": [
+      {
+        "stage": "Closed_Lost",
+        "totalAmount": 48234835.07,
+        "avgAmount": 122113.51,
+        "dealCount": 395,
+        "avgProbability": 0.0,
+        "expectedValue": 0.0
+      },
+      {
+        "stage": "Closed_Won",
+        "totalAmount": 49904248.79,
+        "avgAmount": 121126.82,
+        "dealCount": 412,
+        "avgProbability": 0.96,
+        "expectedValue": 48027693.69
+      },
+      {
+        "stage": "Demo",
+        "totalAmount": 51825246.33,
+        "avgAmount": 125789.43,
+        "dealCount": 412,
+        "avgProbability": 0.45,
+        "expectedValue": 23266362.37
+      },
+      {
+        "stage": "Discovery",
+        "totalAmount": 51748112.62,
+        "avgAmount": 128089.39,
+        "dealCount": 404,
+        "avgProbability": 0.25,
+        "expectedValue": 12953045.41
+      },
+      {
+        "stage": "Negotiation",
+        "totalAmount": 45300121.08,
+        "avgAmount": 120159.47,
+        "dealCount": 377,
+        "avgProbability": 0.75,
+        "expectedValue": 33952808.5
+      }
+    ],
+    "dealsBySegment": {
+      "ENT": 168715324.39000002,
+      "MM": 58976012.79,
+      "SMB": 19321226.71
+    },
+    "stuckDeals": [
+      {
+        "dealId": "DEAL_0002",
+        "account": "Account_411",
+        "amount": 36112.93,
+        "stage": "Discovery",
+        "daysInStage": 72,
+        "owner": "David Wilson",
+        "probability": 0.264
+      },
+      {
+        "dealId": "DEAL_0004",
+        "account": "Account_317",
+        "amount": 26208.86,
+        "stage": "Negotiation",
+        "daysInStage": 384,
+        "owner": "David Wilson",
+        "probability": 0.767
+      },
+      {
+        "dealId": "DEAL_0006",
+        "account": "Account_346",
+        "amount": 110587.42,
+        "stage": "Discovery",
+        "daysInStage": 287,
+        "owner": "Alice Johnson",
+        "probability": 0.247
+      },
+      {
+        "dealId": "DEAL_0007",
+        "account": "Account_007",
+        "amount": 491986.27,
+        "stage": "Negotiation",
+        "daysInStage": 191,
+        "owner": "Eva Brown",
+        "probability": 0.883
+      },
+      {
+        "dealId": "DEAL_0010",
+        "account": "Account_263",
+        "amount": 37343.97,
+        "stage": "Demo",
+        "daysInStage": 292,
+        "owner": "Frank Miller",
+        "probability": 0.455
+      },
+      {
+        "dealId": "DEAL_0013",
+        "account": "Account_287",
+        "amount": 26642.96,
+        "stage": "Demo",
+        "daysInStage": 466,
+        "owner": "Alice Johnson",
+        "probability": 0.427
+      },
+      {
+        "dealId": "DEAL_0014",
+        "account": "Account_104",
+        "amount": 57734.02,
+        "stage": "Demo",
+        "daysInStage": 147,
+        "owner": "Alice Johnson",
+        "probability": 0.46
+      },
+      {
+        "dealId": "DEAL_0016",
+        "account": "Account_054",
+        "amount": 142898.78,
+        "stage": "Negotiation",
+        "daysInStage": 418,
+        "owner": "David Wilson",
+        "probability": 0.659
+      },
+      {
+        "dealId": "DEAL_0018",
+        "account": "Account_394",
+        "amount": 346157.8,
+        "stage": "Demo",
+        "daysInStage": 197,
+        "owner": "Carol Davis",
+        "probability": 0.45
+      },
+      {
+        "dealId": "DEAL_0019",
+        "account": "Account_004",
+        "amount": 111093.93,
+        "stage": "Demo",
+        "daysInStage": 357,
+        "owner": "Carol Davis",
+        "probability": 0.404
+      }
+    ]
+  },
+  "revenue": {
+    "metrics": {
+      "totalMRR": 55339173.31,
+      "totalARR": 664070079.72,
+      "avgARPA": 36892.78220666667,
+      "avgNRR": 0.5934033333333334,
+      "totalCustomers": 1500,
+      "churnedCustomers": 624,
+      "churnRate": 41.6
+    },
+    "segmentBreakdown": [
+      {
+        "segment": "ENT",
+        "totalMRR": 48925893.66,
+        "newMRR": 1883706.3699999999,
+        "expansionMRR": 1105387.95,
+        "contractionMRR": 387324.76,
+        "avgARPA": 96310.81429133858,
+        "avgNRR": 0.7084074803149606,
+        "customerCount": 508
+      },
+      {
+        "segment": "SMB",
+        "totalMRR": 623854.25,
+        "newMRR": 52980.08,
+        "expansionMRR": 11621.57,
+        "contractionMRR": 4535.95,
+        "avgARPA": 1305.1344142259413,
+        "avgNRR": 0.4730502092050209,
+        "customerCount": 478
+      },
+      {
+        "segment": "MM",
+        "totalMRR": 5789425.399999999,
+        "newMRR": 209686.76,
+        "expansionMRR": 149298.69,
+        "contractionMRR": 31108.11,
+        "avgARPA": 11263.47354085603,
+        "avgNRR": 0.5916653696498054,
+        "customerCount": 514
+      }
+    ],
+    "mrrComponents": {
+      "new_mrr": 2146373.21,
+      "expansion_mrr": 1266308.21,
+      "contraction_mrr": 422968.82
+    },
+    "trendsData": [
+      {
+        "month": "2024-07-31",
+        "mrr": 5164989.508933335
+      },
+      {
+        "month": "2024-08-31",
+        "mrr": 5257221.464450001
+      },
+      {
+        "month": "2024-09-30",
+        "mrr": 5349453.419966667
+      },
+      {
+        "month": "2024-10-31",
+        "mrr": 5441685.375483334
+      },
+      {
+        "month": "2024-11-30",
+        "mrr": 5533917.331
+      },
+      {
+        "month": "2024-12-31",
+        "mrr": 5626149.286516667
+      }
+    ]
+  },
+  "benchmarks": [
+    {
+      "benchmark_id": "BENCH_001",
+      "metric_type": "channel_cpl_range",
+      "category": "Google Ads",
+      "subcategory": "SMB",
+      "target_value": 25.0,
+      "min_value": 15.0,
+      "max_value": 50.0,
+      "unit": "currency",
+      "description": "Channel Cpl Range benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_002",
+      "metric_type": "channel_cpl_range",
+      "category": "Google Ads",
+      "subcategory": "MM",
+      "target_value": 45.0,
+      "min_value": 25.0,
+      "max_value": 80.0,
+      "unit": "currency",
+      "description": "Channel Cpl Range benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_003",
+      "metric_type": "channel_cpl_range",
+      "category": "Google Ads",
+      "subcategory": "ENT",
+      "target_value": 100.0,
+      "min_value": 50.0,
+      "max_value": 200.0,
+      "unit": "currency",
+      "description": "Channel Cpl Range benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_004",
+      "metric_type": "channel_cpl_range",
+      "category": "Facebook Ads",
+      "subcategory": "SMB",
+      "target_value": 20.0,
+      "min_value": 10.0,
+      "max_value": 35.0,
+      "unit": "currency",
+      "description": "Channel Cpl Range benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_005",
+      "metric_type": "channel_cpl_range",
+      "category": "Facebook Ads",
+      "subcategory": "MM",
+      "target_value": 35.0,
+      "min_value": 20.0,
+      "max_value": 60.0,
+      "unit": "currency",
+      "description": "Channel Cpl Range benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_006",
+      "metric_type": "channel_cpl_range",
+      "category": "LinkedIn",
+      "subcategory": "ENT",
+      "target_value": 150.0,
+      "min_value": 75.0,
+      "max_value": 300.0,
+      "unit": "currency",
+      "description": "Channel Cpl Range benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_007",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 0.65,
+      "min_value": 0.52,
+      "max_value": 0.78,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_008",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 0.6,
+      "min_value": 0.48,
+      "max_value": 0.72,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_009",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 0.55,
+      "min_value": 0.44,
+      "max_value": 0.66,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_010",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 0.3,
+      "min_value": 0.24,
+      "max_value": 0.36,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_011",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 0.25,
+      "min_value": 0.2,
+      "max_value": 0.3,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_012",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 0.2,
+      "min_value": 0.16,
+      "max_value": 0.24,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_013",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 0.8,
+      "min_value": 0.6400000000000001,
+      "max_value": 0.96,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_014",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 0.75,
+      "min_value": 0.6000000000000001,
+      "max_value": 0.8999999999999999,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_015",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 0.7,
+      "min_value": 0.5599999999999999,
+      "max_value": 0.84,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_016",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 0.6,
+      "min_value": 0.48,
+      "max_value": 0.72,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_017",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 0.55,
+      "min_value": 0.44,
+      "max_value": 0.66,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_018",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 0.5,
+      "min_value": 0.4,
+      "max_value": 0.6,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_019",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 0.45,
+      "min_value": 0.36,
+      "max_value": 0.54,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_020",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 0.4,
+      "min_value": 0.32,
+      "max_value": 0.48,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_021",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 0.35,
+      "min_value": 0.2799999999999999,
+      "max_value": 0.42,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_022",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 0.65,
+      "min_value": 0.52,
+      "max_value": 0.78,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_023",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 0.6,
+      "min_value": 0.48,
+      "max_value": 0.72,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_024",
+      "metric_type": "stage_conversion_benchmarks",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 0.55,
+      "min_value": 0.44,
+      "max_value": 0.66,
+      "unit": "percentage",
+      "description": "Stage Conversion Benchmarks benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_025",
+      "metric_type": "sales_cycle_by_segment",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 60.0,
+      "min_value": 30.0,
+      "max_value": 90.0,
+      "unit": "days",
+      "description": "Sales Cycle By Segment benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_026",
+      "metric_type": "sales_cycle_by_segment",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 120.0,
+      "min_value": 90.0,
+      "max_value": 180.0,
+      "unit": "days",
+      "description": "Sales Cycle By Segment benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_027",
+      "metric_type": "sales_cycle_by_segment",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 240.0,
+      "min_value": 180.0,
+      "max_value": 360.0,
+      "unit": "days",
+      "description": "Sales Cycle By Segment benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_028",
+      "metric_type": "nrr_targets",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 1.05,
+      "min_value": 0.95,
+      "max_value": 1.15,
+      "unit": "number",
+      "description": "Nrr Targets benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_029",
+      "metric_type": "nrr_targets",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 1.08,
+      "min_value": 1.0,
+      "max_value": 1.2,
+      "unit": "number",
+      "description": "Nrr Targets benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_030",
+      "metric_type": "nrr_targets",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 1.12,
+      "min_value": 1.05,
+      "max_value": 1.25,
+      "unit": "number",
+      "description": "Nrr Targets benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_031",
+      "metric_type": "ltv_cac_targets",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 3.0,
+      "min_value": 2.5,
+      "max_value": 5.0,
+      "unit": "ratio",
+      "description": "Ltv Cac Targets benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_032",
+      "metric_type": "ltv_cac_targets",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 4.0,
+      "min_value": 3.0,
+      "max_value": 6.0,
+      "unit": "ratio",
+      "description": "Ltv Cac Targets benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_033",
+      "metric_type": "ltv_cac_targets",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 5.0,
+      "min_value": 3.5,
+      "max_value": 8.0,
+      "unit": "ratio",
+      "description": "Ltv Cac Targets benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_034",
+      "metric_type": "win_rate_targets",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 0.25,
+      "min_value": 0.2,
+      "max_value": 0.35,
+      "unit": "percentage",
+      "description": "Win Rate Targets benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_035",
+      "metric_type": "win_rate_targets",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 0.2,
+      "min_value": 0.15,
+      "max_value": 0.3,
+      "unit": "percentage",
+      "description": "Win Rate Targets benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_036",
+      "metric_type": "win_rate_targets",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 0.15,
+      "min_value": 0.1,
+      "max_value": 0.25,
+      "unit": "percentage",
+      "description": "Win Rate Targets benchmark for ENT"
+    },
+    {
+      "benchmark_id": "BENCH_037",
+      "metric_type": "cac_payback_targets",
+      "category": "SMB",
+      "subcategory": "SMB",
+      "target_value": 12.0,
+      "min_value": 6.0,
+      "max_value": 18.0,
+      "unit": "days",
+      "description": "Cac Payback Targets benchmark for SMB"
+    },
+    {
+      "benchmark_id": "BENCH_038",
+      "metric_type": "cac_payback_targets",
+      "category": "MM",
+      "subcategory": "MM",
+      "target_value": 18.0,
+      "min_value": 12.0,
+      "max_value": 24.0,
+      "unit": "days",
+      "description": "Cac Payback Targets benchmark for MM"
+    },
+    {
+      "benchmark_id": "BENCH_039",
+      "metric_type": "cac_payback_targets",
+      "category": "ENT",
+      "subcategory": "ENT",
+      "target_value": 24.0,
+      "min_value": 18.0,
+      "max_value": 36.0,
+      "unit": "days",
+      "description": "Cac Payback Targets benchmark for ENT"
+    }
+  ]
+}

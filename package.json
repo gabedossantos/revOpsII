@@ -1,0 +1,12 @@
+{
+  "name": "revops-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive RevOps dashboard served from static assets.",
+  "scripts": {
+    "start": "serve -l 4173"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

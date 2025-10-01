@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevOps Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Main Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar" aria-label="Primary">
+            <div class="sidebar-header">
+                <h2>RevOps</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="nav-link active" data-view="overview">
+                    <span class="nav-icon">📊</span>
+                    Overview
+                </a></li>
+                <li><a href="#" class="nav-link" data-view="marketing">
+                    <span class="nav-icon">📈</span>
+                    Marketing
+                </a></li>
+                <li><a href="#" class="nav-link" data-view="pipeline">
+                    <span class="nav-icon">🏢</span>
+                    Pipeline
+                </a></li>
+                <li><a href="#" class="nav-link" data-view="revenue">
+                    <span class="nav-icon">💰</span>
+                    Revenue
+                </a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content" id="main-content">
+            <!-- Header with Filters -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="icon-button mobile-nav-toggle" id="sidebar-toggle" aria-label="Toggle navigation menu" aria-controls="sidebar" aria-expanded="false">
+                        <span class="icon-bars" aria-hidden="true"></span>
+                    </button>
+                    <div class="header-title-group">
+                        <h1 id="page-title">Overview Dashboard</h1>
+                        <p class="breadcrumb">Dashboard / <span id="current-view">Overview</span></p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="filters" role="group" aria-label="Dashboard filters">
+                        <select class="form-control filter-select" id="date-filter" aria-label="Filter by time range">
+                            <option value="30">Last 30 days</option>
+                            <option value="90">Last 90 days</option>
+                            <option value="180" selected>Last 6 months</option>
+                            <option value="365">Last year</option>
+                        </select>
+                        <select class="form-control filter-select" id="segment-filter" aria-label="Filter by customer segment">
+                            <option value="all">All Segments</option>
+                            <option value="SMB">SMB</option>
+                            <option value="MM">Mid-Market</option>
+                            <option value="ENT">Enterprise</option>
+                        </select>
+                    </div>
+                    <div class="design-toggle" role="group" aria-label="Design selector">
+                        <button type="button" class="design-toggle__btn is-active" data-design="design-1" aria-pressed="true">
+                            Design 1
+                        </button>
+                        <button type="button" class="design-toggle__btn" data-design="design-2" aria-pressed="false">
+                            Design 2
+                        </button>
+                    </div>
+                    <button class="btn btn--primary header-action" id="ai-copilot-btn" aria-expanded="false" aria-controls="ai-copilot-drawer">📥 Insights Drawer</button>
+                </div>
+            </header>
+
+            <div class="status-banner hidden" id="status-banner" role="status" aria-live="polite">
+                Loading dashboard data…
+            </div>
+
+            <!-- Overview View -->
+            <div id="overview-view" class="view-content active">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon">💰</div>
+                        <div class="kpi-content">
+                            <h3>Total MRR</h3>
+                            <p class="kpi-value" id="overview-mrr">--</p>
+                            <span class="kpi-meta" id="overview-mrr-meta">--</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">📊</div>
+                        <div class="kpi-content">
+                            <h3>Pipeline Value</h3>
+                            <p class="kpi-value" id="overview-pipeline">--</p>
+                            <span class="kpi-meta" id="overview-pipeline-meta">--</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">📈</div>
+                        <div class="kpi-content">
+                            <h3>Marketing ROI</h3>
+                            <p class="kpi-value" id="overview-roi">--</p>
+                            <span class="kpi-meta" id="overview-roi-meta">--</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">🎯</div>
+                        <div class="kpi-content">
+                            <h3>Win Rate</h3>
+                            <p class="kpi-value" id="overview-winrate">--</p>
+                            <span class="kpi-meta" id="overview-winrate-meta">--</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h4>Performance Highlights</h4>
+                        <div class="highlights-list">
+                            <div class="highlight-item">
+                                <span class="highlight-metric">Top Channel</span>
+                                <span class="highlight-value" id="overview-top-channel">--</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-metric">Largest Stuck Deal</span>
+                                <span class="highlight-value" id="overview-largest-deal">--</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-metric">Top Segment</span>
+                                <span class="highlight-value" id="overview-top-segment">--</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h4>AI Insights</h4>
+                        <div class="ai-insights" id="ai-insights-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing View -->
+            <div id="marketing-view" class="view-content">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Total Spend</h3>
+                            <p class="kpi-value" id="marketing-spend">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Total Leads</h3>
+                            <p class="kpi-value" id="marketing-leads">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Average CAC</h3>
+                            <p class="kpi-value" id="marketing-cac">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Average ROI</h3>
+                            <p class="kpi-value" id="marketing-roi">--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card full-width">
+                        <h4>Marketing Funnel</h4>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="funnel-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-card">
+                        <h4>Channel Performance</h4>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="channel-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-card">
+                        <h4>Lead Trends</h4>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="trends-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <h4>Channel Performance Details</h4>
+                    <div class="table-container">
+                        <table class="performance-table" id="channel-table">
+                            <thead>
+                                <tr>
+                                    <th>Channel</th>
+                                    <th>Spend</th>
+                                    <th>Leads</th>
+                                    <th>MQLs</th>
+                                    <th>SQLs</th>
+                                    <th>CAC</th>
+                                    <th>ROI</th>
+                                    <th>Opportunities</th>
+                                    <th>Closed Won</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pipeline View -->
+            <div id="pipeline-view" class="view-content">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Total Pipeline</h3>
+                            <p class="kpi-value" id="pipeline-total">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Weighted Pipeline</h3>
+                            <p class="kpi-value" id="pipeline-weighted">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Avg Deal Size</h3>
+                            <p class="kpi-value" id="pipeline-dealsize">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Win Rate</h3>
+                            <p class="kpi-value" id="pipeline-winrate">--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h4>Pipeline by Stage</h4>
+                        <div class="chart-container" style="position: relative; height: 400px;">
+                            <canvas id="pipeline-stage-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-card">
+                        <h4>Pipeline by Segment</h4>
+                        <div class="chart-container" style="position: relative; height: 400px;">
+                            <canvas id="pipeline-segment-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert-section">
+                    <h4>⚠️ Stuck Deals (45+ Days)</h4>
+                    <div class="stuck-deals" id="stuck-deals-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue View -->
+            <div id="revenue-view" class="view-content">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Total MRR</h3>
+                            <p class="kpi-value" id="revenue-mrr">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Total ARR</h3>
+                            <p class="kpi-value" id="revenue-arr">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Average NRR</h3>
+                            <p class="kpi-value" id="revenue-nrr">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-content">
+                            <h3>Churn Rate</h3>
+                            <p class="kpi-value" id="revenue-churn">--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h4>MRR by Segment</h4>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="revenue-segment-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-card">
+                        <h4>MRR Growth Trend</h4>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="revenue-trend-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <h4>Segment Performance</h4>
+                    <div class="table-container">
+                        <table class="performance-table" id="segment-table">
+                            <thead>
+                                <tr>
+                                    <th>Segment</th>
+                                    <th>MRR</th>
+                                    <th>Customers</th>
+                                    <th>ARPA</th>
+                                    <th>NRR</th>
+                                    <th>Expansion MRR</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Insights Drawer -->
+        <div class="ai-copilot-drawer" id="ai-copilot-drawer">
+            <div class="drawer-header">
+                <h3>📥 Insights Drawer</h3>
+                <button class="close-btn" id="close-copilot">×</button>
+            </div>
+            <div class="drawer-content">
+                <div class="chat-container" id="chat-container">
+                    <div class="chat-message ai-message">
+                        <p>Hello! This is your RevOps Insights Drawer. You can ask questions about your data or try these:</p>
+                        <div class="suggested-queries">
+                            <button class="query-btn" data-query="What's our best performing channel?">Best performing channel?</button>
+                            <button class="query-btn" data-query="Which deals need attention?">Deals needing attention?</button>
+                            <button class="query-btn" data-query="Show me revenue trends">Revenue trends?</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chat-input" placeholder="Ask me about your RevOps data...">
+                    <button class="send-btn" id="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay for mobile -->
+        <div class="overlay" id="overlay"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

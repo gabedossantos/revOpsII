@@ -1,0 +1,42 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# Env files
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# Misc
+*.zip
+*.zip.zip
+
+# Ignore data backups
+*.bak
+
+# Ignore coverage
+coverage/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore local server output
+serve.json
+
+# Ignore test output
+test-results/
