@@ -1,0 +1,39 @@
+{
+  "marketing": {
+    "metrics": {"totalSpend": 100000, "totalOpportunities": 120, "totalSQLs": 80, "totalClosedWon": 30, "avgCAC": 1200, "avgROI": 2.5},
+    "channelPerformance": [
+      {"channel": "Paid Search", "spend": 30000, "leads": 400, "MQLs": 200, "SQLs": 100, "opportunities": 40, "closed_won": 15, "ROI": 2.1, "CAC": 1000},
+      {"channel": "Organic", "spend": 10000, "leads": 300, "MQLs": 150, "SQLs": 60, "opportunities": 25, "closed_won": 10, "ROI": 3.0, "CAC": 800}
+    ],
+    "trendsData": [
+      {"date": "2025-01-01", "leads": 100, "MQLs": 50, "SQLs": 20},
+      {"date": "2025-02-01", "leads": 120, "MQLs": 60, "SQLs": 25}
+    ]
+  },
+  "pipeline": {
+    "metrics": {"totalPipeline": 500000, "weightedPipeline": 350000, "totalDeals": 50, "avgDealSize": 10000, "winRate": 0.32},
+    "stageBreakdown": [
+      {"stage": "Discovery", "totalAmount": 200000, "dealCount": 20, "avgAmount": 10000, "avgProbability": 0.2, "expectedValue": 40000},
+      {"stage": "Negotiation", "totalAmount": 300000, "dealCount": 30, "avgAmount": 10000, "avgProbability": 0.5, "expectedValue": 150000}
+    ],
+    "dealsBySegment": {"SMB": 20, "MM": 20, "ENT": 10},
+    "stuckDeals": [
+      {"dealId": "DEAL_0002", "account": "Acme Corp", "stage": "Negotiation", "daysInStage": 50, "owner": "Jane Doe", "amount": 25000}
+    ]
+  },
+  "revenue": {
+    "metrics": {"totalMRR": 80000, "avgNRR": 0.95, "churnRate": 0.04, "mrrComponents": {"new_mrr": 10000, "expansion_mrr": 2000, "contraction_mrr": 500}},
+    "segmentBreakdown": [
+      {"segment": "SMB", "totalMRR": 30000, "customerCount": 20, "avgARPA": 1500, "avgNRR": 0.92, "expansionMRR": 1000},
+      {"segment": "ENT", "totalMRR": 50000, "customerCount": 10, "avgARPA": 5000, "avgNRR": 0.98, "expansionMRR": 1000}
+    ],
+    "trendsData": [
+      {"month": "2025-01", "mrr": 75000},
+      {"month": "2025-02", "mrr": 80000}
+    ]
+  },
+  "benchmarks": [
+    {"metric": "Win Rate", "value": 0.3},
+    {"metric": "Churn", "value": 0.05}
+  ]
+}
